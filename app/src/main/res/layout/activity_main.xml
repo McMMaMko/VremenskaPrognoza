@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="70dp"
         android:gravity="center"
-        android:text="Colmatore, TN"
+        android:text="London"
         android:textColor="#ffffff"
         android:textSize="25dp" />
 
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:gravity="center"
-        android:text="So Hot"
+        android:text=""
         android:textColor="#ffffff"
         android:textSize="43dp" />
 
@@ -50,7 +50,6 @@
         <Button
         android:id="@+id/Dugme"
         android:text="SEARCH"
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/Searchbox"

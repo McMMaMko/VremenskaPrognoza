@@ -9,7 +9,20 @@ public class Example {
 
     @SerializedName("weather")
     @Expose
-    private List<Weather> weather = null;
+    private List<Weather> weather;
+    private String base;
+
+    public Main getMain() {
+        return main;
+    }
+
+    @SerializedName("main")
+    @Expose
+    private Main main;
+
+    public List<Weather> getWeather() {
+        return weather;
+    }
 
     public class Weather {
 
@@ -51,4 +64,28 @@ public class Example {
         }
 
     }
-}
+
+    public class Main {
+
+        @SerializedName("temp")
+        @Expose
+        private Double temp;
+        @SerializedName("pressure")
+        @Expose
+        private Integer pressure;
+        @SerializedName("humidity")
+        @Expose
+        private Integer humidity;
+        @SerializedName("temp_min")
+        @Expose
+        private Double tempMin;
+        @SerializedName("temp_max")
+        @Expose
+        private Double tempMax;
+
+
+        public String getTemp() {
+            return String.format("%.02f", temp-273.15);
+        }
+    }
+    }
