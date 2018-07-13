@@ -85,9 +85,10 @@ public class Example {
 
 
         public String getTemp() {
-            temp =- 273.15;
+            temp -= 273.15;
 
-            return String.format("%.02f", temp);
+
+            return String.format("%.0f", temp)+"°";
         }
     }
     }
