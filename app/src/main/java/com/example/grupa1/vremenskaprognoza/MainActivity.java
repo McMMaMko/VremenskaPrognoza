@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<Example> call, Response<Example> response) {
                 w = response.body();
+
                 temp.setText(w.getMain().getTemp());
                 desc.setText(w.getWeather().get(0).getDescription());
 
