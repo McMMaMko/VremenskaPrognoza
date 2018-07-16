@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         WeatherServise service = retrofit.create(WeatherServise.class);
 
-        service.getWeather("Sarajevo,ba").enqueue(new Callback<Example>() {
+        service.getWeather().enqueue(new Callback<Example>() {
             @Override
             public void onResponse(Call<Example> call, Response<Example> response) {
                 w = response.body();
