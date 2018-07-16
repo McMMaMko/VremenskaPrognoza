@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         final TextView city = findViewById(R.id.Place);
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://samples.openweathermap.org")
+                .baseUrl("https://api.openweathermap.org")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<Example> call, Response<Example> response) {
                 w = response.body();
+
                 temp.setText(w.getMain().getTemp());
                 desc.setText(w.getWeather().get(0).getDescription());
 
